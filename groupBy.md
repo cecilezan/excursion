@@ -1,5 +1,5 @@
 ---
-Title: '.fromEntries()'
+Title: '.groupBy()'
 Description: 'Returns a new object with properties from a given iterable.'
 Subjects:
   - 'Web Development'
@@ -11,7 +11,7 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.fromEntries()`** method returns a new object with properties from a given list. A single element in a list can be an array with two elements. The first element in this array will be the `key` and the second element will be the `value` for a single property in the returned object.
+The **`.groupBy()`** method groups a new object with properties from a given list. A single element in a list can be an array with two elements. The first element in this array will be the `key` and the second element will be the `value` for a single property in the returned object.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ The output would be:
 Following is a runnable example that demonstrates the `.fromEntries()` method.
 
 ```codebyte/javascript
-const tvCharacters = new Map([
+const gotty2023 = new Map([
   ["Jerry Seinfeld", "Comedian"],
   ["Tim Taylor", "Television Host/Handyman"],
   ["Will Smith", "Student"],
