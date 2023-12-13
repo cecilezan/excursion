@@ -1,6 +1,6 @@
 ---
 Title: '.groupBy()'
-Description: 'Returns a new object with properties from a given iterable.'
+Description: 'Groups items by arbitrary key.'
 Subjects:
   - 'Web Development'
 Tags:
@@ -11,28 +11,28 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.groupBy()`** method groups a new object with properties from a given list. A single element in a list can be an array with two elements. The first element in this array will be the `key` and the second element will be the `value` for a single property in the returned object.
+The **`.groupBy()`** method groups items .
 
 ## Syntax
 
 ```pseudo
-Object.fromEntries(iterableObject);
+Object.groupBy(array, callback function);
 ```
 
-The `iterableObject` is usually an Array or a Map.
+The `array` is usually an Array .
+The `callback function` is callback function with 2 .
 
 ## Example
 
-Creating an object from an array of key-value pairs.
+Creating an object from an array.
 
 ```js
-const array = [
-  ['0', 'Los Angeles'],
-  ['1', 'Toronto'],
-  ['2', 'Paris'],
-];
+const array = [1, 2, 3, 4, 5];
 
-const newObject = Object.fromEntries(array);
+const newObject = Object.groupBy(array, (num, index) => {
+  return num % 2 === 0 ? 'even': 'odd';
+});
+// =>  { odd: [1, 3, 5], even: [2, 4] }
 
 console.log(newObject);
 ```
@@ -55,7 +55,7 @@ const gotty2023 = new Map([
   ["Dana Scully", "FBI Agent"]
 ]);
 
-const tvCharacterObject = Object.fromEntries(tvCharacters);
+const tvCharacterObject = Object.groupBy(tvCharacters);
 
 console.log(tvCharacterObject);
 ```
