@@ -11,7 +11,7 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.groupBy()`** method groups items .
+The **`.groupBy()`** method groups items of a given iterable according to the string values returned by a provided callback function. The returned value is a null-prototype object, it doesn't inherit any object methods from object.prototype.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ The output would be:
 
 ## Codebyte Example
 
-Following is a runnable example that demonstrates the `.fromEntries()` method.
+Following is a runnable example that demonstrates the `.groupBy()` method.
 
 ```codebyte/javascript
 const gotty2023 = new Map([
