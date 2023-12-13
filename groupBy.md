@@ -1,51 +1,61 @@
 ---
-Title: '.append()'
-Description: 'Adds an item to end of the list.'
+Title: '.fromEntries()'
+Description: 'Returns a new object with properties from a given iterable.'
 Subjects:
-  - 'Data Science'
-  - 'Computer Science'
+  - 'Web Development'
 Tags:
-  - 'Lists'
   - 'Methods'
+  - 'Objects'
 CatalogContent:
-  - 'learn-python-3'
-  - 'paths/data-science'
-  - 'paths/computer-science'
+  - 'introduction-to-javascript'
+  - 'paths/full-stack-engineer-career-path'
 ---
 
-The Python list method `.append()` adds an item to the end of a list.
+The **`.fromEntries()`** method returns a new object with properties from a given list. A single element in a list can be an array with two elements. The first element in this array will be the `key` and the second element will be the `value` for a single property in the returned object.
 
 ## Syntax
 
-```py
-list.append(item)
+```pseudo
+Object.fromEntries(iterableObject);
 ```
 
-The `.append()` will place the object passed in as a new element at the very end of the list. Printing the list afterwards will visually show the appended value.
-
-This method is not to be confused with returning an entirely new list with the passed object.
+The `iterableObject` is usually an Array or a Map.
 
 ## Example
 
-To add `'🥚'` to the end of the `grocery` list:
+Creating an object from an array of key-value pairs.
 
-```py
-grocery = ['🍉', '🍪', '🥬', '🥕']
+```js
+const array = [
+  ['0', 'Los Angeles'],
+  ['1', 'Toronto'],
+  ['2', 'Paris'],
+];
 
-grocery.append('🥚')
+const newObject = Object.fromEntries(array);
 
-print(grocery)
-# Output: ['🍉', '🍪', '🥬', '🥕', '🥚']
+console.log(newObject);
+```
+
+The output would be:
+
+```shell
+{ '0': 'Los Angeles', '1': 'Toronto', '2': 'Paris' }
 ```
 
 ## Codebyte Example
 
-To add `'tulips'` to the end of the `orders` list:
+Following is a runnable example that demonstrates the `.fromEntries()` method.
 
-```codebyte/python
-orders = ['daisies', 'periwinkle']
+```codebyte/javascript
+const tvCharacters = new Map([
+  ["Jerry Seinfeld", "Comedian"],
+  ["Tim Taylor", "Television Host/Handyman"],
+  ["Will Smith", "Student"],
+  ["Dana Scully", "FBI Agent"]
+]);
 
-orders.append('tulips')
+const tvCharacterObject = Object.fromEntries(tvCharacters);
 
-print(orders)
+console.log(tvCharacterObject);
 ```
