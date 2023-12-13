@@ -11,28 +11,35 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.groupBy()`** method groups items of a given iterable according to the string values returned by a provided callback function. The returned value is a null-prototype object, it doesn't inherit any object methods from object.prototype.
+The **`.groupBy()`** method groups items of a given iterable according to the string values returned by a provided callback function. This callback function will determine the group name .The returned value of **`.groupBy()`** method is a null-prototype object, it doesn't inherit any object methods from **`object.prototype`**.
 
 ## Syntax
 
 ```pseudo
-Object.groupBy(array, callback function);
+Object.groupBy(iterable, callfunc);
 ```
 
-The `array` is usually an Array .
-The `callback function` is callback function with 2 .
+The `iterable` is usually an Array .
+The `callfunc` is callback function with 2 returns a string, .
 
 ## Example
 
 Creating an object from an array.
 
 ```js
-const array = [1, 2, 3, 4, 5];
+const subs = [
+{ userName: 'czzanco', yearSubs: 2022 },
+{ userName: 'czzanco2', yearSubs: 2020 },
+{ userName: 'czzanco3', yearSubs: 2020 },
+];
 
-const newObject = Object.groupBy(array, (num, index) => {
-  return num % 2 === 0 ? 'even': 'odd';
+const subsByYear = subs.groupBy(user => {
+  return user.yearSubs;
 });
-// =>  { odd: [1, 3, 5], even: [2, 4] }
+// =>  { 2020: [{ userName: 'czzanco2', yearSubs: 2020 },
+{ userName: 'czzanco3', yearSubs: 2020 },
+ 
+], even: [2, 4] }
 
 console.log(newObject);
 ```
