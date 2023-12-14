@@ -11,15 +11,15 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.groupBy()`** method groups items of a given iterable according to the string values returned by a provided callback function. This callback function will determine the group name .The returned value of **`.groupBy()`** method is a null-prototype object, it doesn't inherit any object methods from **`object.prototype`**.
+The **`.groupBy()`** method groups items according to the string values returned by a callback function. The returned value of **`.groupBy()`** method is a null-prototype object, it doesn't inherit any object methods.
 
 ## Syntax
 
 ```pseudo
-Object.groupBy(iterable, callfunc);
+Object.groupBy(items, callfunc);
 ```
 
-The `iterable` is usually an Array .
+The `items` is usually an Array .
 The `callfunc` is callback function with 2 returns a string, .
 
 ## Example
