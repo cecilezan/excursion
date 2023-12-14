@@ -1,6 +1,6 @@
 ---
 Title: '.groupBy()'
-Description: 'Groups items by a string value.'
+Description: 'Groups items by a returned string value.'
 Subjects:
   - 'Web Development'
 Tags:
