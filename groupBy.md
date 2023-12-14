@@ -1,6 +1,6 @@
 ---
 Title: '.groupBy()'
-Description: 'Groups items by arbitrary key.'
+Description: 'Groups items by a string value.'
 Subjects:
   - 'Web Development'
 Tags:
@@ -11,7 +11,7 @@ CatalogContent:
   - 'paths/full-stack-engineer-career-path'
 ---
 
-The **`.groupBy()`** method groups items according to the string values returned by a callback function. The returned value of **`.groupBy()`** method is a null-prototype object, it doesn't inherit any object methods.
+The **`.groupBy()`** method groups items according to the values (a string) returned by a callback function (link codecademy.com/ressources/docs/javascript/callbacks). The returned value of the **`.groupBy()`** method is a null-prototype object : it doesn't inherit any object methods. (link vers https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
 
 ## Syntax
 
@@ -20,28 +20,28 @@ Object.groupBy(items, callfunc);
 ```
 
 The `items` is usually an Array .
-The `callfunc` is callback function with 2 returns a string, .
+The `callfunc` is a callback function with 2 or 3 arguments and have to return a string.
 
 ## Example
 
-Creating an object from an array.
+Grouping users by their year of subscription.
 
 ```js
 const subs = [
-{ userName: 'czzanco', yearSubs: 2022 },
-{ userName: 'czzanco2', yearSubs: 2020 },
-{ userName: 'czzanco3', yearSubs: 2020 },
+{ userName: 'Lisa', yearSub: 2022 },
+{ userName: 'Akim', yearSub: 2020 },
+{ userName: 'Lola', yearSub: 2020 },
 ];
 
-const subsByYear = subs.groupBy(user => {
+const subsByYear = Objets.groupBy(subs, user => {
   return user.yearSubs;
 });
-// =>  { 2020: [{ userName: 'czzanco2', yearSubs: 2020 },
-{ userName: 'czzanco3', yearSubs: 2020 },
+/* =>  { 2020: [{ userName: 'Akim', yearSubs: 2020 },
+{ userName: 'Lola', yearSubs: 2020 },
  
 ], even: [2, 4] }
 
-console.log(newObject);
+console.log(newObject);*/
 ```
 
 The output would be:
